@@ -1,0 +1,19 @@
+name: dex-net
+
+base:
+  ubuntu: 16.04
+
+apt:
+  - python-setuptools
+  - python-dev
+  - libhdf5-10
+  - libhdf5-serial-dev
+  - libhdf5-dev
+  - libhdf5-cpp-11
+  - python-numpy
+  - libboost-all-dev
+
+custom:
+  - cd ${HOME}/dex-net
+  - pip install --upgrade pip
+  - python setup.py develop
